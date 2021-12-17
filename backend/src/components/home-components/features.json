@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_components_features",
+  "info": {
+    "displayName": "Features",
+    "icon": "baby-carriage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CentralText": {
+      "type": "richtext"
+    },
+    "Items": {
+      "displayName": "Feature Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-components.feature-item"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_shared_investments",
+  "info": {
+    "displayName": "Investment",
+    "icon": "fill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "BgMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "HashTags": {
+      "type": "enumeration",
+      "enum": [
+        "Investment",
+        "VRAR",
+        "HeadlessCMS",
+        "OpenSource"
+      ]
+    },
+    "DisplayType": {
+      "type": "string"
+    }
+  }
+}

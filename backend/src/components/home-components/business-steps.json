@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_components_business_steps",
+  "info": {
+    "displayName": "BusinessSteps",
+    "icon": "city"
+  },
+  "options": {},
+  "attributes": {
+    "Steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dynamics.business-thumb-step"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_page_infos",
+  "info": {
+    "displayName": "PageInfo",
+    "icon": "money-check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "SiteName": {
+      "type": "string"
+    },
+    "AlterName": {
+      "type": "string"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "LogoAlterText": {
+      "type": "string"
+    },
+    "CopyrightText": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-link.social-link"
+    },
+    "QuickLink": {
+      "displayName": "QuickLinkGroup",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-components.quick-link-group"
+    }
+  }
+}

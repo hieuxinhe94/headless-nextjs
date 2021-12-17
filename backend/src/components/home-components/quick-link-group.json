@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_components_quick_link_groups",
+  "info": {
+    "displayName": "QuickLinkGroup",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_dynamics_business_thumb_steps",
+  "info": {
+    "displayName": "BusinessThumbStep",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Index": {
+      "type": "integer"
+    },
+    "BgMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "NavigateLable": {
+      "type": "string"
+    },
+    "NavigateLink": {
+      "type": "string"
+    },
+    "ExtendedClass": {
+      "type": "string"
+    },
+    "DisplayType": {
+      "type": "string"
+    }
+  }
+}

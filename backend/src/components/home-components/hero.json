@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_components_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CentralText": {
+      "type": "string"
+    },
+    "CentralTextDescription": {
+      "type": "string"
+    },
+    "CentralTextSecondary": {
+      "type": "string"
+    },
+    "CentralButtonText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

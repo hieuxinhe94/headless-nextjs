@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_components_brands",
+  "info": {
+    "displayName": "Brand",
+    "icon": "audio-description",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CentralText": {
+      "type": "string"
+    },
+    "BrandLogo": {
+      "displayName": "BrandLogo",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-components.brand-logo"
+    }
+  }
+}
