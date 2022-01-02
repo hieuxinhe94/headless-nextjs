@@ -21,6 +21,31 @@
     },
     "title": {
       "type": "string"
+    },
+    "QuickLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hyperlinks"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "BgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     }
   }
 }

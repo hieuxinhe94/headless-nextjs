@@ -1,5 +1,6 @@
 import App from "next/app"
 import Head from "next/head"
+import "../assets/css/style.css"
 import "../assets/css/tailwind.css"
 import "../assets/css/slick.css"
 import "../assets/css/animate.css"
@@ -22,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link
           rel="shortcut icon"
           href={getStrapiMedia(global.attributes.favicon)}
-        />
+      />
       
     <script src="/js/vendor/jquery-3.5.1-min.js"></script>
     <script src="/js/vendor/modernizr-3.7.1.min.js"></script>
@@ -32,18 +33,15 @@ const MyApp = ({ Component, pageProps }) => {
     <script src="/js/wow.min.js"></script>
     <script src="/js/particles.min.js"></script>
     <script src="/js/main.js"></script>
-      </Head>
-      <GlobalContext.Provider value={global.attributes}>
+
+     </Head>
+     <GlobalContext.Provider value={global.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
     </>
   )
 }
 
-// getInitialProps disables automatic static optimization for pages that don't
-// have getStaticProps. So article, category and home pages still get SSG.
-// Hopefully we can replace this with getStaticProps once this issue is fixed:
-// https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctx)
@@ -57,9 +55,38 @@ MyApp.getInitialProps = async (ctx) => {
     },
   })
 
+  const layoutInfo = await fetchAPI("/homepage",  {
+    populate: 
+    {
+      seo: { populate: "*" },
+      Footer: 
+      { 
+          populate:  {        
+            SubcribeBox:  { populate: "*" },
+            HyperLink  :  { populate: "*" },
+            BgImage:      { populate: "*" } }
+      },
+      SiteInfo:           { populate: "*" },
+      HeaderBgImage:      { populate: "*" },
+      HeroCentralImage:   { populate: "*" },
+      LogoImage:          { populate: "*" },
+    },
+  });  
  
+  const categories = await fetchAPI("/categories", { 
+          populate: {
+            PageHero:     { populate: "*" },
+            PageBody :    { 
+              populate: {
+                Image : { populate: "*" },
+                }
+              },
+          }});
+
+  console.log("categories")
+  console.log(categories.data[0])
   // Pass the data to our page via props
-  return { ...appProps, pageProps: { global: globalRes.data } }
+  return { ...appProps, pageProps: { global: globalRes.data, layoutInfo:  layoutInfo.data.attributes, categories: categories.data} }
 }
 
 export default MyApp

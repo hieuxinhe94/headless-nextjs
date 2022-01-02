@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_subcribe_boxes",
+  "info": {
+    "displayName": "SubcribeBox",
+    "icon": "crow"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "POST_URL": {
+      "type": "string"
+    },
+    "SubmitLabel": {
+      "type": "string"
+    }
+  }
+}

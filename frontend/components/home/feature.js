@@ -5,8 +5,7 @@ import ReactMarkdown from "react-markdown"
 import CustomImage from "../image"
 
 const Feature = ({ feature }) => {
-    console.log("feature");
-    console.log(feature);
+ 
 
     const title = feature.CentralText;
     const items = feature.Items ;

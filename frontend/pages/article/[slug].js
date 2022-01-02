@@ -6,7 +6,7 @@ import NextImage from "../../components/image"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
 
-const Article = ({ article, categories }) => {
+const Article = ({ article, categories, layoutInfo }) => {
   const imageUrl = getStrapiMedia(article.attributes.image)
 
   const seo = {

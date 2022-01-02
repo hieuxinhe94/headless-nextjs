@@ -33,17 +33,14 @@
         "videos"
       ]
     },
-    "HashTags": {
-      "type": "enumeration",
-      "enum": [
-        "Investment",
-        "VRAR",
-        "HeadlessCMS",
-        "OpenSource"
-      ]
-    },
     "DisplayType": {
       "type": "string"
+    },
+    "Items": {
+      "displayName": "InvestField",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.invest-field"
     }
   }
 }

@@ -6,7 +6,8 @@
     "@strapi/strapi": "4.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.2"
   },
   "name": "backend",
   "private": true,
@@ -28,7 +29,7 @@
     "starter": "@strapi/starter-next-blog"
   },
   "engines": {
-    "node": ">=12.20.x <=16.x.x",
+    "node": ">=12.x.x <=16.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

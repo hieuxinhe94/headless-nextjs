@@ -9,15 +9,19 @@
 - Next.js + graphql
 - Mysql
 
+
 # Installation: 
 - For backend : 
     - Config the database at database.js (create new schema if it not exist)
     - Run on the root directory:
+    - Switch database to client or request to #Hieu to add your IP to authorized access IP 
 <code> yarn </code>
+
 <code> yarn build  </code>
 
 - For frontend: 
 <code> yarn </code>
+
 <code> yarn dev  </code>
 
 # How to build: 
@@ -35,6 +39,8 @@
     Example can see at here: ....
     - API: http://localhost:1337/api/homepages
     - Graphql:  http://localhost:1337/graphql
+	admin: dev@email.com
+	pass: Password@1P
 
 - For front end: 
     We have 3 solutions to generate a site data: 

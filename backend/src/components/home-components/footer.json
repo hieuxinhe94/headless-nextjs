@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_home_components_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "SubcribeBox": {
+      "displayName": "SubcribeBox",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.subcribe-box"
+    },
+    "BgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "HyperLink": {
+      "displayName": "HyperLinkGroups",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hyper-link-groups"
+    }
+  }
+}

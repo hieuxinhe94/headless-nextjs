@@ -10,7 +10,7 @@ const Hero = ({ hero, homepage }) => {
    // const centralBgImage =   getStrapiURL() + homepage.attributes.HeaderBgImage?.data.attributes.url;
      
     return (
-        <div id="home" class="header-hero" style={{ backgroundImage:  `url(`+getStrapiURL() + homepage.attributes.HeaderBgImage?.data.attributes.url+`)` }}>
+        <div id=" " class="header-hero" style={{ backgroundImage:  `url(`+getStrapiURL() + homepage.attributes.HeaderBgImage?.data.attributes.url+`)` }}>
             <div class="container">
                 <div class="justify-center row">
                     <div class="w-full lg:w-2/3">

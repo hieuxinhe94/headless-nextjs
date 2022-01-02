@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_hyperlinks",
+  "info": {
+    "displayName": "Hyperlinks",
+    "icon": "bezier-curve"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Href": {
+      "type": "string"
+    }
+  }
+}

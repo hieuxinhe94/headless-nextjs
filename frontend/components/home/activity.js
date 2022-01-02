@@ -1,33 +1,21 @@
 
 import React from "react"
-import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import CustomImage from "../image"
+import BusinessTalk from '../home/business-talk'
+
 const Activity = ({ activity }) => {
-
-    console.log("activity");
-    console.log(activity);
-
-    const businessSections = activity.Steps;
-
-
   return (
       <div>
         { activity?.map((item, i) => (  
-            
-            <div key={i}>
-                { item.Steps.map((item, index) => ( 
-                   buildViewStyle(index, item)
-                ))
-                }
-            </div>
+            buildActivityStyle(i, item)
         ))
         }
      </div>
   )
 }
 
-const buildViewStyle = (index, item) => {
+const buildBusinessStepViewStyle = (index, item) => {
     if (index %2 === 0) {
         return (
             <section  class="relative pt-20 about-area">
@@ -48,6 +36,7 @@ const buildViewStyle = (index, item) => {
                                     source={item.Description}
                                     escapeHtml={false}
                                 />
+                                <br/>
                             <a href={item.NavigateLink} class="main-btn gradient-btn">{item.NavigateLable}</a>
                         </div>  
                     </div>
@@ -59,7 +48,7 @@ const buildViewStyle = (index, item) => {
                 </div> 
             </div> 
             <div class="about-shape-1">
-                <CustomImage  image={item.BgMedia}  key={item.id} />
+                <CustomImage image={item.BgMedia}  key={item.id} />
             </div>
         </section>
     );
@@ -67,7 +56,7 @@ const buildViewStyle = (index, item) => {
       return ( 
            <section  class="relative pt-20 about-area">
             <div class="about-shape-2">
-            <CustomImage  image={item.BgMedia}  key={item.id} />
+            <CustomImage image={item.BgMedia}  key={item.id} />
         </div>
         <div class="container">
             <div class="row">
@@ -86,6 +75,7 @@ const buildViewStyle = (index, item) => {
                                 source={item.Description}
                                 escapeHtml={false}
                             />
+                            <br/>
                         <a href={item.NavigateLink} class="main-btn gradient-btn">{item.NavigateLable}</a>
                     </div>  
                 </div>
@@ -100,6 +90,39 @@ const buildViewStyle = (index, item) => {
     }
 
 }
+
+const buildBusinessInvestmentViewStyle = (index, item) => {
+        return (
+            <div>
+                <BusinessTalk business={item} />
+               
+            </div>
+            );
+}
+
+const buildActivityStyle = (index, item) => { 
+    if ((item.__component).indexOf('business-steps') !== -1)
+    return (
+        <div key={index}>
+            { 
+                item.Steps.map((item, index) => ( 
+                buildBusinessStepViewStyle(index, item)
+                ))
+            }
+    </div>
+    );
+
+    if (item.__component.indexOf('investment') !== -1)
+    return (
+        <div key={index}>
+        { 
+            buildBusinessInvestmentViewStyle(index, item)
+        }
+    </div>
+    );
+
+}
+
 
 export default Activity
 

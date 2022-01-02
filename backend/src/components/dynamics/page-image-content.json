@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dynamics_page_image_contents",
+  "info": {
+    "displayName": "PageImageContent",
+    "icon": "camera-retro"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

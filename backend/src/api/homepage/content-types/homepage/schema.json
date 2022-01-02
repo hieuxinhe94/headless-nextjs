@@ -148,8 +148,29 @@
       "components": [
         "home-components.business-steps",
         "shared.investment"
-
       ]
+    },
+    "Footer": {
+      "displayName": "Footer",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home-components.footer"
+    },
+    "RecentBlog": {
+      "displayName": "RecentBlog",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home-components.recent-blog"
     }
   }
 }

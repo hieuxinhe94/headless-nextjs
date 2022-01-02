@@ -1,15 +1,23 @@
 import React from "react"
 import Link from "next/link"
 
-const Nav = ({ categories }) => {
+const Nav = ({ categories, color }) => {
+  var textColor  = 'text-white';
+  if(color) {
+      textColor = color
+  } 
   return (
     <div>
-      <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
+      <ul id="nav" class={ "items-center content-start mr-auto lg:justify-end navbar-nav lg:flex " + textColor }>
           {categories.map((category) => {
               return (
                 <li class="nav-item" key={category.id}>
-                     <Link href={`/category/${category.attributes.slug}`}>
-                     <a class="page-scroll" href={'#' +category.id}>{category.attributes.name}</a>
+                     <Link href={`/pages/${category.attributes.slug}`}>
+                     <a class="page-scroll" href={`/pages/${category.attributes.slug}`}>
+                     <b >   
+                          {category.attributes.name}
+                        </b>
+                      </a>
                   </Link>
             </li>
               )

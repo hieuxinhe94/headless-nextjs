@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_hyper_link_groups",
+  "info": {
+    "displayName": "HyperLinkGroups",
+    "icon": "arrows-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "GroupValue": {
+      "type": "enumeration",
+      "enum": [
+        "QuickLink",
+        "Resources",
+        "ContactUs"
+      ]
+    }
+  }
+}
