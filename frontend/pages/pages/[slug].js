@@ -2,6 +2,8 @@ import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout" 
 import PageHero from "../../components/home/article-hero"
 import PageBody from "../../components/home/article-content";
+import Seo from "../../components/seo";
+import PageSeo from "../../components/page-seo";
 
 const Page = ({ slug, category, categories, layoutInfo }) => {
   // const seo = {
@@ -24,7 +26,7 @@ const Page = ({ slug, category, categories, layoutInfo }) => {
 
   return (
     <Layout categories={categories} layout={layoutInfo} color={textColor}  >
-      {/* <Seo seo={seo} /> */}
+      <PageSeo seo={category.attributes.seo} />
       <PageHero data={category.attributes.PageHero} color={textColor} />
       <PageBody data={category.attributes.PageBody} />
       {category.attributes.Name}

@@ -16,7 +16,7 @@ const Footer = ({ footer, siteInfo }) => {
             <div class="row">
                 <div class="w-full lg:w-1/2">
                     <div class="lg:mt-12 subscribe-content">
-                        <h2 class="text-2xl font-bold sm:text-4xl subscribe-title">
+                        <h2 class="text-xl font-bold sm:text-2xl subscribe-title">
                          {footer?.Title}
                         </h2>
                         <ReactMarkdown
@@ -37,7 +37,7 @@ const Footer = ({ footer, siteInfo }) => {
                 </div>
             </div>  
         </div>  
-        <div class="footer-widget pb-120">
+        <div class="footer-widget pb-10">
             <div class="row">
                 <div class="w-4/5 md:w-3/5 lg:w-2/6">
                     <div class="mt-12 footer-about wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -45,14 +45,14 @@ const Footer = ({ footer, siteInfo }) => {
                            <CustomImage  image={siteInfo?.Logo}    />
                             {/* <img src="assets/images/logo.svg" alt="logo" class="w-40" /> */}
                         </a>
-                        <p class="pb-10 pr-10 leading-snug text-white">
+                        <p class="pb-10 pr-10 leading-snug text-white content-center">
                             {siteInfo?.AlterName}
                             </p>
                         <ul class="flex footer-social">
-                            <li><a href=" "><i class="lni lni-facebook-filled"></i></a></li>
-                            <li><a href=" "><i class="lni lni-twitter-filled"></i></a></li>
-                            <li><a href=" "><i class="lni lni-instagram-filled"></i></a></li>
-                            <li><a href=" "><i class="lni lni-linkedin-original"></i></a></li>
+                            <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                            <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                            <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                            <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
                         </ul>
                     </div>  
                 </div>

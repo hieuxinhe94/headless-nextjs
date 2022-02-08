@@ -1,4 +1,9 @@
 
 .page-content {
-    min-height: 100rem;
+    min-height: 50rem;
+}
+
+.image-fit {
+    min-width: 100%;
+    height: auto;
 }

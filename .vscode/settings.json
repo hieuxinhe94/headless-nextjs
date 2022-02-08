@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/43e320ac-f1d7-4ff3-9d5e-5223553bef41/resourceGroups/DefaultResourceGroup-SEA/providers/Microsoft.Web/sites/pusilung-cms",
+    "appService.deploySubpath": "backend"
 }

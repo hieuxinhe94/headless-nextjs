@@ -1,9 +1,12 @@
 
 import React from "react"
 import { getStrapiURL } from "../../lib/api";
+import EmptyBox from "./empty-box";
 
 const PageHero = ({ data, color }) => {
  
+    if(!data) return <EmptyBox  />
+
     var centralImage,centralBgImage;
     if(data.Image?.data?.attributes.url) {
           centralImage =     getStrapiURL() + data.Image?.data?.attributes.url;
@@ -40,7 +43,7 @@ const PageHero = ({ data, color }) => {
                         <div class="pt-16 mb-12 text-center lg:pt-16 header-hero-content">
                            
                             <h2 class={"mb-3 text-4xl font-bold header-title wow fadeInUp " + textColor}  data-wow-duration="1.3s" data-wow-delay="0.5s">
-                            { data?.CentralTextDescription}
+                                { data?.CentralTextDescription}
                             </h2>
                             
                         </div>  

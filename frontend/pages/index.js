@@ -56,10 +56,17 @@ export async function getStaticProps() {
          populate: {
             Articles : { populate: "*" },
           }},
-     
+      //  Footer:   { 
+      //       populate:  {        
+      //         SubcribeBox: { populate: "*" },
+      //         HyperLink  : { populate: "*" },
+      //         BgImage: { populate: "*" } }
+      //     },
+        // SiteInfo:  { populate: "*" },
+          HeaderBgImage:  { populate: "*" },
           HeroCentralImage:  { populate: "*" },
          LogoImage: { populate: "*" },
-     
+        // FooterBgImage: { populate: "*" },
       },
     }),
     fetchAPI("/articles", { populate: "*" }),

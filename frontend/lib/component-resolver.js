@@ -48,12 +48,12 @@ export function resolverComponent(componentName,   ...args) {
  export function transformImageUriPeform(uri, children, title, alt) {
     return uri.startsWith("/") ? getStrapiURL(uri) : uri;
  }
+
  export function resolverDynamicExtract(dynamicContent) { 
-   console.log("dynamicContent")
-   console.log(dynamicContent)
+ 
    if ((dynamicContent.__component).indexOf('dynamics.page-content') !== -1)
    return (
-      <div class="container">
+      <div key={dynamicContent.Id} class="container">
       <div class="justify-center row">
           <div class="w-full lg:w-2/3">
               <div class="pb-10 text-center section-title">
@@ -67,7 +67,7 @@ export function resolverComponent(componentName,   ...args) {
       </div>  
       <div class=" pt-12 pb-10 row"> 
        <ReactMarkdown
-       transformImageUri={transformImageUriPeform}
+                      transformImageUri={transformImageUriPeform}
                       source={dynamicContent.Content}
                       escapeHtml={true}
                   />
@@ -84,8 +84,8 @@ export function resolverComponent(componentName,   ...args) {
                   
                   
                   <div class="relative justify-center mr-6 rounded-lg shadow-md video-wrapper">
-                      <div class="video-image justify-center">
-                      <CustomImage  image={dynamicContent?.Image}  />
+                      <div class="video-image bg-light-blue-300">
+                      <CustomImage imageClass={"image-fit"}  image={dynamicContent?.Image}  />
                        
                       </div>
                       {/* <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-blue-900 bg-opacity-25 rounded-lg video-icon">

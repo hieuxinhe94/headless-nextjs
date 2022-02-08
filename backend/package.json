@@ -4,6 +4,8 @@
     "@strapi/plugin-i18n": "4.0.0",
     "@strapi/plugin-users-permissions": "4.0.0",
     "@strapi/strapi": "4.0.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.2",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "mysql": "^2.18.1",
@@ -16,8 +18,9 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "build": "strapi build && strapi start",
+    "strapi": "strapi",
+    "build:win": "cross-env NODE_ENV=production npm run build"
   },
   "devDependencies": {},
   "author": {

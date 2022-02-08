@@ -5,23 +5,23 @@ import { getStrapiURL } from "../lib/api";
 const CustomImage = ({ image, style, imageClass = null }) => {
 
   if(!image) {
-    return  <a href="#">
+    return   
       <img class="blank" src="blank" alt="blank image" />
-    </a>
+   
   }
 
   if(image?.data?.attributes == null) {
-    return  <a href="#">
+    return   
       <img class="blank" src="blank" alt="blank image" />
-    </a>
+   
   }
   const { url, alternativeText, width, height } = image.data.attributes;
  
   const srcUrl = getStrapiURL() + url;
   return (
-    <a href="#">
+     
         <img class={imageClass} src={srcUrl} alt="Logo" />
-    </a>
+    
    
     // <NextImage
     //   // loader={loader}

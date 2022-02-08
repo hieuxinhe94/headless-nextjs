@@ -6,7 +6,7 @@ const PageBody = ({ data }) => {
     console.log("PageBody")
     console.log(data)
 
-    if(!data) return <section id="content" class="services-area pt-120 age-content">
+    if(!data) return <section id="content" class="services-area pt-120 page-content">
         No content
     </section>
    
@@ -16,7 +16,7 @@ const PageBody = ({ data }) => {
     //             }
     //         </section>)
 
-    return (<section id="content" class="services-area pt-120 age-content">
+    return (<section id="content" class="services-area pt-120 page-content">
     {
         data.map(dynamicContent => {
                 return  resolverDynamicExtract(dynamicContent);

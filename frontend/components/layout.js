@@ -27,12 +27,12 @@ const Layout = ({ children, categories, layout, color }) => {
         </div>
         
     <header class="header-area">
-        <div class="navbar-area">
+        <div class="navbar-area ">
             <div class="container relative">
                 <div class="row">
                     <div class="w-full">
                         <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                            <a className={ "mr-4 navbar-brand " + textColor} href="./">
+                            <a className={ "mr-4 navbar-brand " + textColor} href="/">
                                 {/* <img src={homepage.attributes.LogoImage.attributes.url } alt="Logo" /> */}
                                 <CustomImage image={layout.LogoImage} />
                                 {layout.SiteInfo.SiteName }
