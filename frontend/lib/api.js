@@ -7,7 +7,7 @@ import qs from "qs"
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://cms4438-dev.azurewebsites.net"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://sixdong-cms-icb9x.ondigitalocean.app"
   }${path}`
 }
 

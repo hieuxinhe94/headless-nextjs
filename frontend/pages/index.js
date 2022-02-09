@@ -52,21 +52,21 @@ export async function getStaticProps() {
             Items: { populate: "*" },
             
        }},
-       RecentBlog: { 
-         populate: {
-            Articles : { populate: "*" },
-          }},
-      //  Footer:   { 
-      //       populate:  {        
-      //         SubcribeBox: { populate: "*" },
-      //         HyperLink  : { populate: "*" },
-      //         BgImage: { populate: "*" } }
-      //     },
-        // SiteInfo:  { populate: "*" },
+         RecentBlog: { 
+           populate: {
+              Articles : { populate: "*" },
+            }},
+         Footer:   { 
+              populate:  {        
+                SubcribeBox: { populate: "*" },
+                HyperLink  : { populate: "*" },
+                BgImage: { populate: "*" } }
+            },
+        SiteInfo:  { populate: "*" },
           HeaderBgImage:  { populate: "*" },
           HeroCentralImage:  { populate: "*" },
          LogoImage: { populate: "*" },
-        // FooterBgImage: { populate: "*" },
+        FooterBgImage: { populate: "*" },
       },
     }),
     fetchAPI("/articles", { populate: "*" }),
