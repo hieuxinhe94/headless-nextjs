@@ -1,5 +1,4 @@
-import { getStrapiMedia } from "../lib/media"
-import NextImage from "next/image"
+ 
 import { getStrapiURL } from "../lib/api";
 
 const CustomImage = ({ image, style, imageClass = null }) => {
