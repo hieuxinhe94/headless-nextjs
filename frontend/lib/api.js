@@ -46,3 +46,9 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   const data = await response.json()
   return data
 }
+ 
+
+
+
+
+ 

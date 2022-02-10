@@ -1613,6 +1613,7 @@ p {
   height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  float: right;
 }
 
 @media (max-width: 500px) {

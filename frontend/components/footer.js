@@ -3,7 +3,7 @@ import CustomImage from "../components/image"
 import { getStrapiURL } from "../lib/api";
 
 const Footer = ({ footer, siteInfo }) => {
- 
+  
     const quickLinks = footer?.HyperLink.filter(link => link.GroupValue == 'QuickLink');
     const resourceLinks = footer?.HyperLink.filter(link => link.GroupValue == 'Resources');
     const contactLinks = footer?.HyperLink.filter(link => link.GroupValue == 'ContactUs');
@@ -17,21 +17,20 @@ const Footer = ({ footer, siteInfo }) => {
                 <div class="w-full lg:w-1/2">
                     <div class="lg:mt-12 subscribe-content">
                         <h2 class="text-xl font-bold sm:text-2xl subscribe-title">
-                         {footer?.Title}
+                         {footer?.SubcribeBox.Title}
                         </h2>
                         <ReactMarkdown
-                                            source={footer?.Description}
+                                            source={footer?.SubcribeBox.Description}
                                             escapeHtml={false}
                                 />
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2">
-                    <div class="mt-12 subscribe-form">
-                        <form action="#" class="relative focus:outline-none">
-                            <input type="type" placeholder="Enter email/phone number" class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none" />
-                            <button class="main-btn gradient-btn">
-                                { footer?.NavigateLabel }
-                            </button>
+                    <div class="mt-12 ">
+                        <form action= { footer?.SubcribeBox.POST_URL } class="relative focus:outline-none float-right">
+                            {/* <input type="type" placeholder="Enter email/phone number" class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none" /> */}
+                            <a href={ footer?.SubcribeBox.POST_URL } class="main-btn gradient-btn"> { footer?.SubcribeBox.SubmitLabel }</a>
+                           
                         </form>
                     </div>
                 </div>

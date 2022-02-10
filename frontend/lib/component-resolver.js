@@ -16,7 +16,7 @@ export function resolverComponent(componentName,   ...args) {
          case "Activity": return (
             <Activity activity={args[0]}  />
          )
-         case "Activity": return (
+         case "Brand": return (
             <Brand brand={args[0]}  />
          )
          case "Feature": return (
