@@ -34,7 +34,7 @@ const PageHero = ({ data, color }) => {
                 <div class="justify-center row">
                     <div class="w-full lg:w-2/3">
                         <div class="text-center header-hero-image wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                            <img className="inline-block" src={centralImage} alt="hero" style={ { display: centralImage != null ? 'block' : 'none' } } /> 
+                            <img className="inline-block image-centered" src={centralImage} alt="hero" style={ { display: centralImage != null ? 'block' : 'none' } } /> 
                         </div> 
                     </div>
                 </div> 

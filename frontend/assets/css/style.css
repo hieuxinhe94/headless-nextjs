@@ -11,3 +11,8 @@
 .float-right {
     float: right;
 }
+
+.image-centered {
+    margin-left: auto;
+    margin-right: auto;
+}

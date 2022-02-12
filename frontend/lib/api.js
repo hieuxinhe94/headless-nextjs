@@ -27,6 +27,8 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     ...options,
   }
 
+  urlParamsObject.locale = "en";
+  
   // Build request URL
   const queryString = qs.stringify(urlParamsObject)
   const requestUrl = `${getStrapiURL(
