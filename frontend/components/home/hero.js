@@ -16,14 +16,15 @@ const Hero = ({ hero, homepage }) => {
                     <div class="w-full lg:w-2/3">
                         <div class="pt-32 mb-12 text-center lg:pt-48 header-hero-content">
                             <h3 class="text-4xl font-light leading-tight text-white header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">{ hero?.CentralText}</h3>
+                            <a href="#" class="main-btn pt-32 gradient-btn gradient-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">
+                            { hero?.CentralButtonText}
+                            </a>
                             <h2 class="mb-3 text-4xl font-bold text-white header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
                             { hero?.CentralTextDescription}
                             </h2>
                             <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s"> 
                              { hero?.CentralTextSecondary}</p>
-                            <a href="#" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">
-                            { hero?.CentralButtonText}
-                            </a>
+                           
                         </div>  
                     </div>
                 </div>  

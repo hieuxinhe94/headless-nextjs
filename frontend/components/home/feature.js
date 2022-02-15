@@ -35,7 +35,7 @@ const Feature = ({ feature }) => {
                                </div>
                                <div class="mt-8 services-content">
                                    <h4 class="mb-8 text-xl font-bold text-gray-900">{item.Title}</h4>
-                                   <p class="mb-8">{item.Description}</p>
+                                   <p class="mb-8 card-content">{item.Description}</p>
                                    <a href={item.NavigateLink} class="duration-300 hover:text-theme-color" >
                                        {item.NavigateTextLabel}
                                     <i class="ml-2 lni lni-chevron-right"></i>

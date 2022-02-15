@@ -29,10 +29,10 @@ const BusinessTalk = ({ business }) => {
                         <div class="counter-content">
                             <div class="mb-8 section-title">
                                 <div class="line"></div>
-                                <ReactMarkdown
+                                <div class="title"><ReactMarkdown
                                     source={business.Title}
                                     escapeHtml={false}
-                                />
+                                /></div>
                             </div>  
                             <p class="text">
                                 <ReactMarkdown

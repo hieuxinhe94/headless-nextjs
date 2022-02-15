@@ -16,3 +16,16 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.card-content {
+    min-height: 200px;
+}
+
+.blog-image {
+    height: 230px;
+}
+
+.blog-title {
+    height: 50px;
+}
+

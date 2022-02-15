@@ -27,7 +27,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     ...options,
   }
 
-  urlParamsObject.locale = "en";
+  urlParamsObject.locale = "vi";
   
   // Build request URL
   const queryString = qs.stringify(urlParamsObject)

@@ -13,8 +13,8 @@ const PinnedBlog = ({ data, args1 }) => {
                 <div class="w-full lg:w-1/2">
                     <div class="pb-8 section-title">
                         <div class="line"></div>
-                        
-                        {data?.Title}
+                        <div class="title">
+                        {data?.Title}</div>
                         <ReactMarkdown
                                     source={data?.Description}
                                     escapeHtml={false}
@@ -28,7 +28,7 @@ const PinnedBlog = ({ data, args1 }) => {
                  
                  <div class="w-full md:w-2/3 lg:w-1/3">
                  <div class="mx-4 mt-10 single-blog wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                     <div class="mb-5 overflow-hidden blog-image rounded-xl">
+                     <div class="mb-5 overflow-hidden blog-image rounded-xl blog-image">
                           
                          <CustomImage  image={post.attributes.image} imageClass={"w-full"}  key={i} />
                      </div>
@@ -37,9 +37,9 @@ const PinnedBlog = ({ data, args1 }) => {
                              <li>Posted By: <a href=" ">{post.attributes.author?.name}</a></li>
                              <li class="ml-12">{post.attributes.publishedAt}</li>
                          </ul> */}
-                         <p class="mb-6 text-2xl leading-snug text-gray-900"  >{post.attributes.title}</p>
+                         <p class="mb-6 text-2xl leading-snug text-gray-900 blog-title"  >{post.attributes.title}</p>
                          <a class="text-theme-color-2" href={"/articles/" + post.attributes.slug}>
-                             Learn More
+                             Chi tiết
                              <i class="ml-2 lni lni-chevron-right"></i>
                          </a>
                      </div>
