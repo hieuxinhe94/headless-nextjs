@@ -64,7 +64,7 @@ const Footer = ({ footer, siteInfo }) => {
                                 </div>
                                 <ul class="link">
                                     { quickLinks?.map((item, i) => 
-                                         (<li key={i}><a href={item.Link}>{item.Title}</a></li> ))
+                                         (<li key={i + "a"}><a href={item.Link}>{item.Title}</a></li> ))
                                     }
                                 </ul>
                             </div>  
@@ -76,7 +76,7 @@ const Footer = ({ footer, siteInfo }) => {
                                 </div>
                                 <ul class="link">
                                     { resourceLinks?.map((item, i) => 
-                                         (<li key={i}><a href={item.Link}>{item.Title}</a></li> ))
+                                         (<li key={i + "b"}><a href={item.Link}>{item.Title}</a></li> ))
                                     }
                                 </ul>
                             </div>  
@@ -90,7 +90,7 @@ const Footer = ({ footer, siteInfo }) => {
                         </div>
                         <ul class="contact">
                                     { contactLinks?.map((item, i) => 
-                                         (<li key={i}><a href={item.Link}>{item.Title}</a></li> ))
+                                         (<li key={i + "c"}><a href={item.Link}>{item.Title}</a></li> ))
                                     }
                            
                         </ul>
