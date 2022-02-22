@@ -10,7 +10,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:8080"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://welead-cms-ejidv.ondigitalocean.app"
   }${path}`
 }
 
