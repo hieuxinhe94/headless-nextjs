@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 
 const Nav = ({ categories, color }) => {
+  console.log(categories)
   var textColor  = 'text-white';
   if(color) {
       textColor = color
@@ -15,7 +16,7 @@ const Nav = ({ categories, color }) => {
                      <Link href={`/pages/${category.attributes.slug}`}>
                      <a class="page-scroll" href={`/pages/${category.attributes.slug}`}>
                      <b >   
-                          {category.attributes.name}
+                          {category.attributes.name ?? category.attributes.Name}
                         </b>
                       </a>
                   </Link>

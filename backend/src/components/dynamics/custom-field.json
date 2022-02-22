@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_dynamics_custom_fields",
+  "info": {
+    "displayName": "Custom_field",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Required": {
+      "type": "boolean"
+    },
+    "Options": {
+      "type": "text"
+    }
+  }
+}

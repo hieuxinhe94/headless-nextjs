@@ -35,7 +35,7 @@ const Layout = ({ children, categories, layout, color }) => {
                             <a className={ "mr-4 navbar-brand " + textColor} href="/">
                                 {/* <img src={homepage.attributes.LogoImage.attributes.url } alt="Logo" /> */}
                                 <CustomImage image={layout.LogoImage} />
-                                {layout.SiteInfo.SiteName }
+                                {/* {layout.SiteInfo.SiteName } */}
                             </a>
                             <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>

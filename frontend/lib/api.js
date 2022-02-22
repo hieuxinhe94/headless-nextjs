@@ -1,4 +1,7 @@
 import qs from "qs"
+import useSWR from 'swr'
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 /**
  * Get full Strapi URL from path
@@ -7,7 +10,7 @@ import qs from "qs"
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://sixdong-cms-icb9x.ondigitalocean.app"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:8080"
   }${path}`
 }
 
@@ -27,15 +30,13 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     ...options,
   }
 
-  urlParamsObject.locale = "vi";
+  // urlParamsObject.locale = "vi";
   
   // Build request URL
   const queryString = qs.stringify(urlParamsObject)
   const requestUrl = `${getStrapiURL(
     `/api${path}${queryString ? `?${queryString}` : ""}`
   )}`
-
-  console.error(requestUrl)
 
   // Trigger API call
   const response = await fetch(requestUrl, mergedOptions)
@@ -47,6 +48,54 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   }
   const data = await response.json()
   return data
+}
+ 
+export async function getProductCatalogs() {
+  const categories = await fetchAPI("/product-categories");
+  return categories;
+}
+
+export async function getProductCatalog(slug, urlParamsObject = {}) {
+  const queryString = qs.stringify(urlParamsObject)
+  const categories = await fetchAPI(`/product-categories?slug=${slug}&${queryString ? `${queryString}` : ""}`);
+  return categories?.data[0];
+}
+
+export async function getProducts() {
+  const products = await fetchAPI("/products");
+  return products;
+}
+
+export async function getProduct(slug, urlParamsObject = {}) {
+  const queryString = qs.stringify(urlParamsObject)
+  const products = await fetchAPI(`/products?slug=${slug}&${queryString ? `${queryString}` : ""}`);
+  return products?.data[0];
+}
+
+export   function  getProductThumb(id, urlParamsObject = {}) {
+  const queryString = qs.stringify(urlParamsObject)
+  const requestUrl = `${getStrapiURL(
+    `/api/products/${id}?${queryString ? `${queryString}` : ""}`
+  )}`
+ 
+  return useSWR(
+    requestUrl,
+    fetcher
+  );
+}
+
+export   function  getProductDetail(slug, urlParamsObject = {}) {
+  const queryString = qs.stringify(urlParamsObject)
+  const requestUrl = `${getStrapiURL(
+    `/api/products/?filters[slug]=${slug}&${queryString ? `${queryString}` : ""}`
+  )}`
+    
+  console.log(requestUrl);
+
+  return useSWR(
+    requestUrl,
+    fetcher
+  );
 }
  
 

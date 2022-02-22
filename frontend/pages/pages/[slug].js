@@ -36,7 +36,7 @@ const Page = ({ slug, category, categories, layoutInfo }) => {
 
 export async function getStaticPaths(context) {
   console.log("context.slug")
-  console.log(context)
+  
   const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] })
 
   return {

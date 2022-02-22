@@ -33,6 +33,16 @@
     },
     "IsActive": {
       "type": "boolean"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "productcategories"
     }
   }
 }

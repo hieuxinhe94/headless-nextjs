@@ -9,30 +9,28 @@ const CustomImage = ({ image, style, imageClass = null }) => {
    
   // }
 
-  if(image?.data?.attributes == null) {
+  if(image?.data?.attributes == null && image?.attributes == null) {
     return  ( 
       <img class="blank" src="blank" alt="blank image" />)
    
   }
 
-  const { url, alternativeText, width, height } = image.data.attributes;
+  if(image?.attributes?.url) {
+    const { url, alternativeText, width, height } = image.attributes;
+    const srcUrl = getStrapiURL() + url;
+
+    return (
+      <img class={imageClass ?? ""} src={srcUrl} alt="Logo" />
+    ) ;
+  } else {
+    const { url, alternativeText, width, height } = image.data.attributes;
+    const srcUrl = getStrapiURL() + url;
+
+    return (
+      <img class={imageClass ?? ""} src={srcUrl} alt="Logo" />
+    );
+  }
  
-  const srcUrl = getStrapiURL() + url;
-  return (
-     
-        <img class={imageClass} src={srcUrl} alt="Logo" />
-    
-   
-    // <NextImage
-    //   // loader={loader}
-    //   layout="responsive"
-    //   width={100}
-    //   height={200}
-    //   objectFit="contain"
-    //   src={ srcUrl}
-    //   // alt={alternativeText || ""}
-    // />
-  )
 }
 
 export default CustomImage

@@ -358,10 +358,7 @@ $(function () {
         },
         "retina_detect": !0
     });
-
-
-
-
-
-
 });
+
+
+

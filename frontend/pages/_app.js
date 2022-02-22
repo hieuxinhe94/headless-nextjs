@@ -6,6 +6,9 @@ import "../assets/css/slick.css"
 import "../assets/css/animate.css"
 import "../assets/css/icon.css"
 import "../assets/css/magnific-popup.css"
+import "../assets/css/tiny-slider.css"
+import "../assets/css/glightbox.min.css" 
+
 
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
@@ -22,7 +25,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <link
           rel="shortcut icon"
-          href={getStrapiMedia(global.attributes.favicon)}
+          href={getStrapiMedia(global?.attributes?.favicon)}
       />
       
     <script src="/js/vendor/jquery-3.5.1-min.js"></script>
@@ -35,7 +38,7 @@ const MyApp = ({ Component, pageProps }) => {
     <script src="/js/main.js"></script>
 
      </Head>
-     <GlobalContext.Provider value={global.attributes}>
+     <GlobalContext.Provider value={global?.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
     </>
@@ -74,7 +77,12 @@ MyApp.getInitialProps = async (ctx) => {
   });  
  
   const categories = await fetchAPI("/categories", { 
-          populate: {
+        filters: {
+          IsTopMenu: {
+            "[$eq]" : "true"
+          }
+        },
+        populate: {
             PageHero:     { populate: "*" },
             PageBody :    { 
               populate: {
@@ -83,8 +91,7 @@ MyApp.getInitialProps = async (ctx) => {
               },
           }});
 
-  console.log("categories")
-  console.log(categories.data[0])
+  
   // Pass the data to our page via props
   return { ...appProps, pageProps: { global: globalRes.data, layoutInfo:  layoutInfo.data.attributes, categories: categories.data} }
 }

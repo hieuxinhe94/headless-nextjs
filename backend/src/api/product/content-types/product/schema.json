@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product"
+    "displayName": "Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,22 +22,24 @@
       "type": "string"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "IsActive": {
       "type": "boolean"
@@ -52,8 +55,29 @@
       "relation": "oneToOne",
       "target": "api::product-category.product-category"
     },
-    "UId": {
-      "type": "uid"
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "productcategories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-category.product-category",
+      "inversedBy": "products"
+    },
+    "Custom_field": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dynamics.custom-field"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "Sold": {
+      "type": "integer"
+    },
+    "SoldOut": {
+      "type": "boolean"
     }
   }
 }

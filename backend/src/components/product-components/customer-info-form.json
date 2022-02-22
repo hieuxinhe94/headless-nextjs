@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_components_customer_info_forms",
+  "info": {
+    "displayName": "CustomerInfoForm",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}
