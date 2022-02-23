@@ -12,7 +12,7 @@ const brandItemss = brand.BrandLogo;
                 <div class="w-full">
                     <div class="items-center justify-center row lg:justify-between">
                     { brandItemss.map((item) => (
-                        <div  class="single-logo hover:opacity-100 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" >
+                        <div key={item.id}  class="single-logo hover:opacity-100 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" >
                             <CustomImage image={item.Logo}  key={item.id} />
                         </div>  ))
                     }

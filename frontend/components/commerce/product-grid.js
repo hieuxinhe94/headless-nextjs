@@ -10,6 +10,9 @@ var featureProductWrapTmp;
 var productsFiltered;
 
 const ProductGridThumb = ({ featureProductWrap = [], categories = [], col = 3, row = 5 }) => {
+
+    if(!featureProductWrap || featureProductWrap.length ==0) return <></>
+    
     featureProductWrapTmp = featureProductWrap;
     defaultgroupId = defaultgroupId ?? featureProductWrap[0].id;
     productsFiltered = productsFiltered ?? featureProductWrap.filter(t=> t.id == defaultgroupId)[0].Items;
