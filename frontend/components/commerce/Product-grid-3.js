@@ -32,7 +32,7 @@ const ProductGrid3Thumb = ({ featureProductWrap , categories = [], colClass="w-f
   return (
       <div class="w-full">
           <section class="counter-section section-padding" 
-          style={{ backgroundImage:  `url(`+getStrapiURL() + productsFiltered[name]?.BgImage?.data.attributes.url+`)` }} >
+          style={{ backgroundImage:  `url(`+getStrapiURL() + productsFiltered[name]?.BgImage?.data?.attributes?.url+`)` }} >
       <div class="container">
 
       <div class="row justify-center">
